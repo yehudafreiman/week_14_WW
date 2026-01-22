@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weapon-warehouse-api
+  labels:
+    app: weapon-warehouse-api
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: weapon-warehouse-api
+  template:
+    metadata:
+      labels:
+        app: weapon-warehouse-api
+        tier: backend
+    spec:
+      containers:
+      - name: weapon-warehouse-api
+        image: yehudafreiman/weapon-warehouse-api:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        env:
+        - name: MYSQL_HOST
+          value: "mysql-0.mysql"
+        - name: MYSQL_PORT
+          value: "3306"
+        - name: MYSQL_USER
+          value: "weapon_warehouse_user"
+        - name: MYSQL_PASSWORD
+          value: "weapon_warehouse_pass"
+        - name: MYSQL_DATABASE
+          value: "weapon_warehouse"
+
