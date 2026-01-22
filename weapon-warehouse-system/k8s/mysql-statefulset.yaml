@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: docker.io/library/mysql:7
+        image: mysql:9.6.0
         ports:
         - containerPort: 3306
           name: mysql
@@ -29,11 +29,13 @@ spec:
           value: "weapon_warehouse_user"
         - name: MYSQL_INITDB_ROOT_PASSWORD
           value: "weapon_warehouse_pass"
+        - name: MYSQL_ROOT_PASSWORD
+          value: "weapon_warehouse_pass"
         - name: MYSQL_INITDB_DATABASE
           value: "weapon_warehouse"
         volumeMounts:
         - name: mysql-data
-          mountPath: data/db/
+          mountPath: /var/lib/mysql
   volumeClaimTemplates:
   - metadata:
       name: mysql-data
