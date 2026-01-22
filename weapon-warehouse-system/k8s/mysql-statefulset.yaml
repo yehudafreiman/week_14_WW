@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+    tier: database
+spec:
+  serviceName: mysql
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mysql
+      tier: database
+  template:
+    metadata:
+      labels:
+        app: mysql
+        tier: database
+    spec:
+      containers:
+      - name: mysql
+        image: docker.io/library/mysql:7
+        ports:
+        - containerPort: 3306
+          name: mysql
+        env:
+        - name: MYSQL_INITDB_ROOT_USERNAME
+          value: "weapon_warehouse_user"
+        - name: MYSQL_INITDB_ROOT_PASSWORD
+          value: "weapon_warehouse_pass"
+        - name: MYSQL_INITDB_DATABASE
+          value: "weapon_warehouse"
+        volumeMounts:
+        - name: mysql-data
+          mountPath: data/db/
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-data
+      labels:
+        app: mysql
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
