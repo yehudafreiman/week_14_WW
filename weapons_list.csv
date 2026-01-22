@@ -1,0 +1,21 @@
+weapon_id,weapon_name,weapon_type,range_km,weight_kg,manufacturer,origin_country,storage_location,year_estimated
+W-001,Falcon-7,Missile,15,85.5,Orion Systems,Iran,Warehouse-A,2016
+W-002,Red Spear,Rocket,45,120,NULL,Iran,Warehouse-B,2014
+W-003,Night Howl,RPG,2,7.4,Atlas Arms,Syria,Warehouse-A,2012
+W-004,Iron Wave,Missile,180,430,NULL,Iran,Warehouse-C,2018
+W-005,Desert Fang,Rocket,60,95,Al Qamar Industries,Iraq,Warehouse-B,2015
+W-006,Thunder Pipe,Mortar,8,32,NULL,Yemen,Warehouse-D,2011
+W-007,Silent Rain,Missile,320,900,Orion Systems,Iran,Warehouse-C,2020
+W-008,Copper Tail,RPG,1,6.8,NULL,Lebanon,Warehouse-A,2010
+W-009,Ash Breaker,Rocket,90,150,Eastern Forge,Syria,Warehouse-D,2017
+W-010,Long Reach,Missile,250,670,NULL,Iran,Warehouse-C,2019
+W-011,Stone Fire,Mortar,6,28.5,Atlas Arms,Iraq,Warehouse-B,2013
+W-012,Black Needle,Missile,22,110,NULL,Iran,Warehouse-A,2016
+W-013,Storm Claw,Rocket,130,210,Orion Systems,Syria,Warehouse-C,2018
+W-014,Short Echo,RPG,3,8.2,NULL,Gaza,Warehouse-D,2014
+W-015,Heavy Roar,Missile,400,1200,Al Qamar Industries,Iran,Warehouse-C,2021
+W-016,Dust Arrow,Rocket,35,88,NULL,Lebanon,Warehouse-B,2015
+W-017,Night Spike,Mortar,12,40,Eastern Forge,Iraq,Warehouse-D,2016
+W-018,Crimson Path,Missile,75,260,NULL,Iran,Warehouse-A,2017
+W-019,Iron Spark,RPG,4,9.1,Atlas Arms,Syria,Warehouse-B,2012
+W-020,Sky Hammer,Missile,520,1500,NULL,Iran,Warehouse-C,2022
