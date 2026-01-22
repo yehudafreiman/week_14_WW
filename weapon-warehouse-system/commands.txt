@@ -1,0 +1,3 @@
+docker build -t yehudafreiman/weapon-warehouse-api:v1 .
+docker push yehudafreiman/weapon-warehouse-api:v1
+oc apply -f .
