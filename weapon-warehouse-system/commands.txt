@@ -2,7 +2,9 @@ docker build -t yehudafreiman/weapon-warehouse-api:v1 .
 docker push yehudafreiman/weapon-warehouse-api:v1
 
 oc apply -f k8s/mysql-statefulset.yaml
-oc apply -f k8s/api-deployment.yaml
+
+oc new-build --name=weapon-warehouse-api --binary --strategy=docker
+oc start-build weapon-warehouse-api --from-dir=./app --follow
 
 oc apply -f k8s/api-service.yaml
 oc apply -f k8s/mysql-service.yaml
@@ -11,4 +13,6 @@ oc expose service/weapon-warehouse-api
 
 oc get pods
 oc get routes
+
+
 
